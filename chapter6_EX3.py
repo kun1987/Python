@@ -3,7 +3,7 @@
 
 def is_between(x,y,z):
     #this is a function is_between(x, y, z) that returns True if x ≤ y ≤ z or False otherwise.
-    if x < y < z:
+    if x <= y <= z:
         return True
     else:
         return False
