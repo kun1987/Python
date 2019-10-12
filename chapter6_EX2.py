@@ -1,21 +1,22 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Oct  9 15:50:41 2019
+fin = open('words.txt')
+def has_no_e(txt): 
+    #this function prints only the words that have no “e” and computes the percentage of the words in the list have no “e.”
+    count1 = 0 #count numbers of words with 'e'
+    count2 = 0 #count numbers of words with no 'e'
+    for line in txt:
+    	word = line.strip()
+    	if 'e' in word:
+            count1 += 1
+        else:
+            print word
+            count2 += 1
+    percent = count2*1.0/(count1+count2)*100
+    if count2 != 0:
+        return percent
+    else:
+        return True
+    
+fin = open('words.txt')
 
-@author: Kun Wang
-"""
-import math
-
-def hypotenus(a,b):
-    #this function returns the length of the hypotenuse of a right triangle 
-    #given the lengths of the two legs as arguments. 
-    c = math.sqrt(a**2+b**2)
-    return c
-def hypotenus_custom():
-    a = input('please enter a: ')
-    b = input('please enter b: ')
-    return hypotenus(a,b)
-
-if __name__ == "__main__":	
-    print hypotenus_custom()
+if __name__ == "__main__":
+    print str(has_no_e(fin)) + "% of the words don't have an 'e'."
