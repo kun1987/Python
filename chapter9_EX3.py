@@ -1,15 +1,13 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
-
 fin = open('words.txt')
 
 def avoid(word,letters):
     #this function takes a word and a string of forbidden letters, 
     #and that returns True if the word doesn’t use any of the forbidden letters.
-    if letters not in word:
-        return True
+    for chr in word:
+        if chr in letters:
+            return False
     else:
-        return False
+        return True
     
 def avoid_costom():
     #prompt the user to enter a string of forbidden letters 
