@@ -22,9 +22,26 @@ def is_palindrome_custom():
     word = raw_input('please enter a word: ')
     print is_palindrome(word)
 
+def is_palindrome1(word):
+    #the same with function palindrome 
+    i = 0
+    j = len(word)-1
+
+    while i<j:
+        if word[i] != word[j]:
+            return False
+        i = i+1
+        j = j-1
+
+    return True
+
 if __name__ == "__main__":
     print is_palindrome(' ')
     print is_palindrome('pop')
     print is_palindrome('moom')
     print is_palindrome('redivider')
+    print is_palindrome1(' ')
+    print is_palindrome1('pop')
+    print is_palindrome1('moom')
+    print is_palindrome1('redivider')
     is_palindrome_custom()
