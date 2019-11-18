@@ -17,6 +17,9 @@ def is_triangle(a, b, c):
             print "degenerate"
 	else:
 		return "No"
+	'''
+	This is 
+	'''
     
 def is_triangle_custom():
 	a = input("Please input a: ")
